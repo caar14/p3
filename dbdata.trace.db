@@ -1,0 +1,23 @@
+2026-02-28 17:33:22.701268+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "SELECT * FROM CARRITO\000d\000a[*]SELECT * FROM LINEA_DE_CARRITO"
+Syntax error in SQL statement "SELECT * FROM CARRITO\000d\000a[*]SELECT * FROM LINEA_DE_CARRITO"; SQL statement:
+SELECT * FROM CARRITO
+SELECT * FROM LINEA_DE_CARRITO [42000-232]
+2026-02-28 17:33:24.609076+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "SELECT * FROM CARRITO\000d\000a[*]SELECT * FROM LINEA_DE_CARRITO"
+Syntax error in SQL statement "SELECT * FROM CARRITO\000d\000a[*]SELECT * FROM LINEA_DE_CARRITO"; SQL statement:
+SELECT * FROM CARRITO
+SELECT * FROM LINEA_DE_CARRITO [42000-232]
+2026-02-28 17:33:48.822385+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "SELECT * FROM CARRITO\000d\000a[*]SELECT * FROM LINEA_DE_CARRITO"
+Syntax error in SQL statement "SELECT * FROM CARRITO\000d\000a[*]SELECT * FROM LINEA_DE_CARRITO"; SQL statement:
+SELECT * FROM CARRITO
+SELECT * FROM LINEA_DE_CARRITO [42000-232]
+2026-02-28 17:48:34.663696+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "SELECT * [*]LINEA_DE_CARRITO"
+Syntax error in SQL statement "SELECT * [*]LINEA_DE_CARRITO"; SQL statement:
+SELECT * LINEA_DE_CARRITO [42000-232]
+2026-02-28 17:48:36.665985+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "SELECT * [*]LINEA_DE_CARRITO"
+Syntax error in SQL statement "SELECT * [*]LINEA_DE_CARRITO"; SQL statement:
+SELECT * LINEA_DE_CARRITO [42000-232]
