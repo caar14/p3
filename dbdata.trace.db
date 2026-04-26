@@ -21,3 +21,67 @@ SELECT * LINEA_DE_CARRITO [42000-232]
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "SELECT * [*]LINEA_DE_CARRITO"
 Syntax error in SQL statement "SELECT * [*]LINEA_DE_CARRITO"; SQL statement:
 SELECT * LINEA_DE_CARRITO [42000-232]
+2026-04-23 19:33:53.917353+02:00 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "DELETE [*]* FROM CARRITO"; se esperaba "identifier"
+Syntax error in SQL statement "DELETE [*]* FROM CARRITO"; expected "identifier"; SQL statement:
+DELETE * FROM CARRITO [42001-232]
+2026-04-23 19:33:55.021632+02:00 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "DELETE [*]* FROM CARRITO"; se esperaba "identifier"
+Syntax error in SQL statement "DELETE [*]* FROM CARRITO"; expected "identifier"; SQL statement:
+DELETE * FROM CARRITO [42001-232]
+2026-04-23 19:33:55.970818+02:00 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "DELETE [*]* FROM CARRITO"; se esperaba "identifier"
+Syntax error in SQL statement "DELETE [*]* FROM CARRITO"; expected "identifier"; SQL statement:
+DELETE * FROM CARRITO [42001-232]
+2026-04-23 19:33:56.980847+02:00 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "DELETE [*]* FROM CARRITO"; se esperaba "identifier"
+Syntax error in SQL statement "DELETE [*]* FROM CARRITO"; expected "identifier"; SQL statement:
+DELETE * FROM CARRITO [42001-232]
+2026-04-23 19:34:02.308882+02:00 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "DELETE [*]* FROM CARRITO"; se esperaba "identifier"
+Syntax error in SQL statement "DELETE [*]* FROM CARRITO"; expected "identifier"; SQL statement:
+DELETE * FROM CARRITO [42001-232]
+2026-04-24 12:25:27.796747+02:00 jdbc[25]: null
+org.h2.message.DbException: La conexión no fue cerrada por la aplicación y esta siendo limpiada (garbage collected)
+The connection was not closed by the application and is garbage collected [90018-232]
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.get(DbException.java:188)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:217)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:134)
+	at org.h2.Driver.connect(Driver.java:59)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:370)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:207)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:752)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:731)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: La conexión no fue cerrada por la aplicación y esta siendo limpiada (garbage collected)
+The connection was not closed by the application and is garbage collected [90018-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:690)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 16 more
+2026-04-24 12:56:41.732975+02:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "SELECT * FROM CARRITO \000d\000aELECT [*]* FROM LINEA_DE_CARRITO"
+Syntax error in SQL statement "SELECT * FROM CARRITO \000d\000aELECT [*]* FROM LINEA_DE_CARRITO"; SQL statement:
+SELECT * FROM CARRITO 
+ELECT * FROM LINEA_DE_CARRITO [42000-232]
+2026-04-24 12:56:43.727496+02:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "SELECT * FROM CARRITO \000d\000aELECT [*]* FROM LINEA_DE_CARRITO"
+Syntax error in SQL statement "SELECT * FROM CARRITO \000d\000aELECT [*]* FROM LINEA_DE_CARRITO"; SQL statement:
+SELECT * FROM CARRITO 
+ELECT * FROM LINEA_DE_CARRITO [42000-232]
+2026-04-24 12:56:55.705670+02:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "SELECT * FROM CARRITO \000d\000a[*]SELECT * FROM LINEA_DE_CARRITO"
+Syntax error in SQL statement "SELECT * FROM CARRITO \000d\000a[*]SELECT * FROM LINEA_DE_CARRITO"; SQL statement:
+SELECT * FROM CARRITO 
+SELECT * FROM LINEA_DE_CARRITO [42000-232]
+2026-04-24 12:57:12.298734+02:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "SELECT * FROM CARRITO \000d\000a[*]SELECT * FROM LINEA_DE_CARRITO"
+Syntax error in SQL statement "SELECT * FROM CARRITO \000d\000a[*]SELECT * FROM LINEA_DE_CARRITO"; SQL statement:
+SELECT * FROM CARRITO 
+SELECT * FROM LINEA_DE_CARRITO [42000-232]

@@ -11,6 +11,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Service
 public class ServicioCarritos {
 
@@ -60,21 +63,65 @@ public class ServicioCarritos {
             }else{
 
                 linea.carrito = carrito;
-
                 repoLinea.save(linea);
+
             }
 
             carritoBuscado.precio += linea.coste_total;
             repoCarritos.save(carritoBuscado);
             return (carritoBuscado);
 
+    }
+
+    public Carrito borraLinea(Carrito carrito, Long articuloId){
+
+        Carrito carritoBuscado = repoCarritos.findByUsuarioId(carrito.usuarioId);
+        LineaDeCarrito lineaCreada = repoLinea.findByArticuloIdAndCarrito(articuloId, carritoBuscado);
+        if (carritoBuscado == null) {
+            log.info("Servicio carritos: Carrito no encontrado");
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+
+        }else if (lineaCreada != null) {
+
+            log.info(String.valueOf(lineaCreada.coste_total));
+            log.info(String.valueOf(carritoBuscado.precio));
+            carritoBuscado.precio -= lineaCreada.coste_total;
+
+
+            repoLinea.delete(lineaCreada);
+            repoCarritos.save(carritoBuscado);
+
+        }else{
+
+            log.info("Servicio carritos: Linea no encontrada");
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+
+        }
+
+
+        return (carritoBuscado);
+
+    }
 
 
 
+    public List<LineaDeCarrito> getLineas(Carrito carrito){
 
+        Iterable<LineaDeCarrito> todas = repoLinea.findAll(); //CRUD devuelve iterable no List
+        List<LineaDeCarrito> resultado = new ArrayList<>();
+
+        for (LineaDeCarrito linea: todas){
+            if (linea.carrito == carrito){
+                resultado.add(linea);
+            }
+        }
+
+        return resultado;
 
 
     }
+
+
 
 
     public void borra(Carrito carrito) throws Exception {
